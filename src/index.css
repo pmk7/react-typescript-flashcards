@@ -1,0 +1,34 @@
+/* Variables */
+
+:root {
+  --color-primary: #2e4786;
+  --wordSpacing: 0.3rem;
+  --letterSpacing: 0.1rem;
+  --lightShadow: 2px 5px 6px 6px rgba(0, 0, 0, 0.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  word-spacing: var(--spacing);
+  letter-spacing: var(--letterSpacing);
+}
+
+li {
+  list-style: none;
+  margin: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 1rem;
+}
