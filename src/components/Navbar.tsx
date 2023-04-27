@@ -2,29 +2,35 @@ import React from "react";
 import styled from "styled-components";
 import logo from "../assets/logo.png";
 import menu from "../assets/menu.svg";
+import Button from "./Button";
+import LinkButton from "./LinkButton";
 
 const Navbar = () => {
+  const handleClick = () => {
+    console.log("Button clicked");
+  };
+
   return (
     <Wrapper>
       <nav id="navbar">
         <div className="nav-left">
-          <img id="menu" src={menu} alt="menu" />
-          <div className="nav-logo">
-            <img className="logo" src={logo} alt="logo" />
-          </div>
+          <button className="menu-btn">
+            <img src={menu} alt="menu" />
+          </button>
+          <div className="nav-logo"></div>
           <div>
             <ul className="nav-links-desktop">
               <li>
-                <a href="#">Home</a>
+                <LinkButton to="/">Home</LinkButton>
               </li>
               <li>
-                <a href="mysets.html">My Sets</a>
+                <LinkButton to="/mysets">My Sets</LinkButton>
               </li>
               <li>
-                <a href="about.html">About</a>
+                <LinkButton to="/about">About</LinkButton>
               </li>
               <li>
-                <a href="#">Contact</a>
+                <LinkButton to="/contact">Contact</LinkButton>
               </li>
             </ul>
           </div>
@@ -32,10 +38,10 @@ const Navbar = () => {
         <div className="nav-right">
           <ul className="nav-links">
             <li>
-              <a href="#">Login</a>
+              <Button onClick={handleClick}>Login</Button>
             </li>
             <li>
-              <a href="#">Sign Up</a>
+              <Button onClick={handleClick}>Sign Up</Button>
             </li>
           </ul>
         </div>
@@ -53,9 +59,10 @@ const Wrapper = styled.div`
     align-items: center;
   }
 
-  #menu {
+  .menu-btn {
     cursor: pointer;
     height: 2rem;
+    background-color: white;
   }
 
   .nav-left {
@@ -69,7 +76,9 @@ const Wrapper = styled.div`
   }
 
   .nav-links-desktop {
-    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .nav-right {
@@ -87,25 +96,6 @@ const Wrapper = styled.div`
   .nav-links li {
     margin-left: 1rem;
     text-decoration: none;
-  }
-
-  .logo {
-    height: 7rem;
-    width: 7rem;
-    padding: 0;
-    margin-left: 1rem;
-  }
-
-  .sticky {
-    height: 5rem;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 100;
-  }
-
-  #navbar-placeholder {
-    height: 0.5rem;
   }
 `;
 
