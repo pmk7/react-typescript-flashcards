@@ -8,19 +8,19 @@ import Footer from "./components/Footer";
 import MySets from "./components/MySets";
 import Home from "./pages/HomePage";
 import About from "./components/About";
+import Sidebar from "./components/Sidebar";
 
 function App() {
   return (
     <Router>
-      <div>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/my-sets" element={<MySets />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
-        <Footer />
-      </div>
+      <Navbar />
+      {/* <Sidebar /> */}
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/mysets" element={<MySets />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+      <Footer />
     </Router>
   );
 }

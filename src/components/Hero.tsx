@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import hero from "../assets/hero.jpg";
+import mountain from "../assets/mountain.svg";
 import Button from "./Button";
 
 const Hero = () => {
@@ -10,18 +11,17 @@ const Hero = () => {
 
   return (
     <Wrapper>
-      <div className="hero-container">
-        <img className="hero-img" src={hero} alt="" />
+      <img className="hero-img" src={mountain} alt="" />
+      <div className="right-container">
         <div className="hero-text">
-          <h1>Make Learning Languages Easy!</h1>
+          <h1>Learn Languages with a Flash!</h1>
           <p>
-            I'm baby twee adaptogen viral tumblr mumblecore YOLO knausgaard
-            pabst PBR&B aesthetic la croix. Kitsch selfies bespoke kickstarter 3
-            wolf moon, woke tumeric tbh. 3 wolf moon authentic literally
-            lumbersexual, humblebrag selfies thundercats disrupt lomo health
-            goth kale chips.
+            Master vocabulary and grammar effortlessly with captivating,
+            interactive flashcards. Embark on your linguistic adventure today!
           </p>
-          <Button onClick={handleClick}>Sign Up</Button>
+          <button onClick={handleClick} className="hero-btn">
+            Sign Up
+          </button>
         </div>
       </div>
     </Wrapper>
@@ -29,11 +29,10 @@ const Hero = () => {
 };
 
 const Wrapper = styled.div`
-  .hero-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-  }
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   .hero-text * {
     margin: 1rem;
@@ -46,18 +45,104 @@ const Wrapper = styled.div`
     object-fit: cover;
   }
 
-  .hero-text {
+  .right-container {
     position: absolute;
-    margin-top: 2rem;
-    margin-left: 2rem;
-    top: 10px;
-    width: 50%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1rem;
   }
 
-  @media screen and (min-width: 1200px) {
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--main-yellow);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+  }
+
+  .hero-btn {
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+    background-color: var(--main-yellow);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+
+    &:hover {
+      background-color: #1558c5;
+      box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.7);
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .right-container {
+      margin-top: 5rem;
+      margin-left: 10rem;
+      top: 0;
+      width: 50%;
+      padding: 0;
+      align-items: flex-start;
+      /* border: solid red 1px; */
+    }
+
     .hero-text {
-      font-size: 1.5rem;
-      margin-left: 5rem;
+      text-align: right;
+    }
+
+    .hero-text h1 {
+      font-size: 2.5rem;
+    }
+
+    .hero-text p {
+      font-size: 1.2rem;
+    }
+
+    .hero-btn {
+      font-size: 1.2rem;
+      padding: 1rem 2rem;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    .right-container {
+      margin-top: 5rem;
+      margin-left: 10rem;
+      top: 0;
+      width: 50%;
+      padding: 0;
+      align-items: flex-start;
+      /* border: solid red 1px; */
+    }
+
+    .hero-text {
+      text-align: right;
+    }
+
+    .hero-text h1 {
+      font-size: 2.5rem;
+    }
+
+    .hero-text p {
+      font-size: 1.2rem;
+    }
+
+    .hero-btn {
+      font-size: 1.2rem;
+      padding: 1rem 2rem;
     }
   }
 `;

@@ -11,28 +11,31 @@ const Button: FC<ButtonProps> = ({ children, onClick }) => {
 };
 
 const Wrapper = styled.button`
+  font-size: 0.8rem;
+  padding: 0.25rem 0.75rem;
   background-color: var(--color-primary);
-  border-radius: 8px;
-  border-style: none;
-  box-sizing: border-box;
-  color: #ffffff;
+  color: #fff;
+  border: none;
+  border-radius: 2px;
   cursor: pointer;
-  display: inline-block;
-  font-family: inherit;
-  font-size: 14px;
-  font-weight: 500;
-  height: 2rem;
-  list-style: none;
-  outline: none;
-  padding: 10px 16px;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  transition: color 100ms;
-  vertical-align: baseline;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+  transition: background-color 0.3s, box-shadow 0.3s;
+
+  &:hover {
+    background-color: var(--color-secondary);
+
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav-btn {
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 1.2rem;
+  }
 `;
 
 export default Button;

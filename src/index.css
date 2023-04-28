@@ -1,7 +1,14 @@
 /* Variables */
 
 :root {
-  --color-primary: #2e4786;
+  --color-primary: #4255ff;
+  --color-secondary: #f6d8fe;
+  --main-white: #fff;
+  --off-white: #f7f7f7;
+  --main-grey: #f6f7fb;
+  --main-yellow: #ffcd1f;
+  --main-purple: #dbdfff;
+  --secondary-blue: #95e0fd;
   --wordSpacing: 0.3rem;
   --letterSpacing: 0.1rem;
   --lightShadow: 2px 5px 6px 6px rgba(0, 0, 0, 0.5);
@@ -15,7 +22,7 @@
 
 body {
   font-size: 16px;
-  font-family: "Inter", sans-serif;
+  font-family: "Roboto", sans-serif;
   word-spacing: var(--spacing);
   letter-spacing: var(--letterSpacing);
 }

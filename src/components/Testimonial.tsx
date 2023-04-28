@@ -14,9 +14,7 @@ const Testimonial = () => {
           <p>
             I'm baby austin XOXO man bun, kale chips poke hexagon waistcoat
             ascot. Mumblecore blog hammock, bruh sus echo park photo booth
-            poutine +1 mlkshk tacos ennui venmo. Mustache tumeric af, sartorial
-            fam aesthetic hoodie lyft artisan authentic kitsch everyday carry.
-            Keffiyeh farm-to-table vibecession pop-up taxidermy selfies paleo.
+            poutine +1 mlkshk tacos ennui venmo.
           </p>
         </div>
         <div className="profile-two">
@@ -25,11 +23,7 @@ const Testimonial = () => {
           <p>
             I'm baby locavore art party franzen kinfolk. Brunch yr hell of
             dreamcatcher, next level kogi subway tile truffaut pour-over hashtag
-            mumblecore tbh microdosing stumptown cred. Flexitarian austin
-            heirloom viral. Slow-carb gastropub unicorn gatekeep praxis narwhal
-            adaptogen selfies microdosing disrupt viral copper mug brunch
-            godard. Viral shoreditch beard, mlkshk truffaut lomo kitsch marxism
-            tumeric cupping brunch locavore fashion axe polaroid.
+            mumblecore tbh microdosing stumptown cred.
           </p>
         </div>
         <div className="profile-three">
@@ -38,11 +32,7 @@ const Testimonial = () => {
           <p>
             I'm baby asymmetrical meditation neutra affogato farm-to-table, raw
             denim celiac skateboard ennui taxidermy praxis pabst scenester banh
-            mi. Air plant raw denim hot chicken cloud bread tofu DSA. Bitters
-            meh health goth crucifix plaid. Cardigan pinterest skateboard
-            gorpcore. Prism cornhole pok pok waistcoat gochujang la croix pork
-            belly woke neutral milk hotel seitan hoodie listicle slow-carb food
-            truck.
+            mi.
           </p>
         </div>
       </div>
@@ -73,8 +63,15 @@ const Wrapper = styled.div`
   }
 
   @media screen and (min-width: 1200px) {
+    .testimonial-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
     .headshot-images {
-      width: 30%;
+      object-fit: cover;
+      border-radius: 50%;
+      width: 50%;
     }
   }
 `;

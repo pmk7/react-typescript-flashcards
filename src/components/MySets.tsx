@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import Button from "./Button";
 
 const MySets = () => {
   const [isFlipped, setIsFlipped] = useState(false);
+
+  const handleButtonClick = () => {
+    console.log("button clicked");
+  };
 
   const handleCardClick = () => {
     setIsFlipped(!isFlipped);
@@ -12,11 +17,11 @@ const MySets = () => {
     <Wrapper>
       <main className="my-sets">
         <h1>German</h1>
-        <div className="sets-buttons">
-          <button>Flashcards</button>
-          <button>Learn</button>
-          <button>Test</button>
-          <button>Match</button>
+        <div className="sets-btns">
+          <Button onClick={handleButtonClick}>Flashcards</Button>
+          <Button onClick={handleButtonClick}>Learn</Button>
+          <Button onClick={handleButtonClick}>Test</Button>
+          <Button onClick={handleButtonClick}>Match</Button>
         </div>
         <div className="card-container">
           <div
@@ -33,15 +38,42 @@ const MySets = () => {
 };
 
 const Wrapper = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .my-sets {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    text-align: center;
+  }
   .card-container {
+    width: 100%;
+    max-width: 30rem;
+    margin: 0 auto;
+    padding: 1rem;
     perspective: 1000px;
-    width: 30rem;
-    height: 20rem;
+  }
+
+  .sets-btns {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
   }
 
   .card {
     width: 100%;
-    height: 100%;
+    height: 15rem;
     position: relative;
     transform-style: preserve-3d;
     transition: transform 0.8s;
@@ -72,6 +104,26 @@ const Wrapper = styled.div`
   .card-side.english {
     background-color: #e9e9e9;
     transform: rotateY(180deg);
+  }
+
+  @media only screen and (min-width: 768px) {
+    .card-container {
+      max-width: 40rem;
+    }
+
+    .card {
+      height: 20rem;
+    }
+  }
+
+  @media only screen and (min-width: 1200px) {
+    .card-container {
+      max-width: 50rem;
+    }
+
+    .card {
+      height: 25rem;
+    }
   }
 `;
 

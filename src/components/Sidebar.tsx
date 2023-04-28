@@ -1,84 +1,88 @@
-import React from "react";
+import React, { MouseEvent } from "react"; // Change MouseEvent to ReactMouseEvent
 import styled from "styled-components";
 import close from "../assets/x.svg";
 
-const Sidebar = () => {
+interface SidebarProps {}
+
+const Sidebar: React.FC<SidebarProps> = () => {
+  const handleClose = (event: MouseEvent<HTMLButtonElement>) => {
+    // Change MouseEvent to ReactMouseEvent
+    console.log("Close sidebar");
+  };
+
   return (
     <Wrapper>
-      <nav>
-        <button
-          className="close-btn"
-          onClick={() => console.log("Close sidebar")}
-        >
-          <img src={close} alt="Close sidebar" />
-        </button>
-        <ul>
-          <li>
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="#">My Sets</a>
-          </li>
-          <li>
-            <a href="#">About</a>
-          </li>
-          <li>
-            <a href="#">Contact</a>
-          </li>
-        </ul>
-      </nav>
+      <CloseButton onClick={handleClose}>
+        <img src={close} alt="Close sidebar" />
+      </CloseButton>
+      <NavList>
+        <NavItem>
+          <NavLink href="#">Home</NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink href="#">My Sets</NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink href="#">About</NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink href="#">Contact</NavLink>
+        </NavItem>
+      </NavList>
     </Wrapper>
   );
 };
-
 const Wrapper = styled.div`
-  :root {
-    --color-primary: #f06292;
-  }
-
+  background-color: var(--color-primary);
   width: 20%;
   margin-right: 2rem;
+  height: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+`;
 
-  nav {
-    ul {
-      padding: 0;
-    }
+const CloseButton = styled.button`
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: block;
+  padding: 1rem;
+  position: relative;
+  text-align: right;
+  width: 100%;
 
-    li {
-      padding: 1rem 0;
-      font-size: 1.2rem;
-    }
+  &:hover img,
+  &:focus img {
+    filter: brightness(0.8);
+  }
 
-    a {
-      color: var(--color-primary);
-      text-decoration: none;
+  img {
+    height: 24px;
+    width: 24px;
+  }
+`;
 
-      &:hover,
-      &:focus {
-        text-decoration: underline;
-      }
-    }
+const NavList = styled.ul`
+  padding: 0;
+  margin-top: 2rem;
+  list-style-type: none;
+`;
 
-    .close-btn {
-      background: none;
-      border: none;
-      cursor: pointer;
-      display: block;
-      padding: 0.5rem;
-      position: relative;
-      text-align: right;
-      width: 100%;
+const NavItem = styled.li`
+  padding: 1rem 0;
+  font-size: 1.2rem;
+`;
 
-      &:hover img,
-      &:focus img {
-        filter: brightness(0.8);
-      }
+const NavLink = styled.a`
+  color: var(--color-primary);
+  text-decoration: none;
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.2s;
 
-      img {
-        height: 24px;
-        width: 24px;
-      }
-    }
+  &:hover,
+  &:focus {
+    background-color: rgba(255, 255, 255, 0.1);
   }
 `;
 
