@@ -63,6 +63,9 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 `;
 const NavbarContainer = styled.div`
   display: flex;
@@ -90,8 +93,12 @@ const MenuButton = styled.button`
 `;
 
 const Logo = styled.img`
-  height: 5rem;
+  height: 3rem;
   margin-left: 1rem;
+
+  @media screen and (min-width: 1200px) {
+    height: 5rem;
+  }
 `;
 
 const NavLinksDesktop = styled.ul`

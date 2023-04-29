@@ -14,7 +14,7 @@ const Hero = () => {
       <img className="hero-img" src={mountain} alt="" />
       <div className="right-container">
         <div className="hero-text">
-          <h1>Learn Languages with a Flash!</h1>
+          <h1>Learn Languages in a Flash!</h1>
           <p>
             Master vocabulary and grammar effortlessly with captivating,
             interactive flashcards. Embark on your linguistic adventure today!
@@ -60,14 +60,14 @@ const Wrapper = styled.div`
   }
 
   .hero-text h1 {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: bold;
     color: var(--main-yellow);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
 
   .hero-text p {
-    font-size: 1rem;
+    font-size: 0.7rem;
     line-height: 1.6;
     color: #333;
   }

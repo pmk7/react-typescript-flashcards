@@ -8,31 +8,31 @@ const Testimonial = () => {
   return (
     <Wrapper className="section-testimonial">
       <div className="testimonial-container">
-        <div className="profile-one">
-          <h2>Lorem ipsum dolor</h2>
-          <img className="headshot-images" src={profile1} alt="" />
+        <div className="profile profile-one">
+          <img className="headshot-images" src={profile1} alt="Profile 1" />
+          <h3>John</h3>
+          <h2>Language Enthusiast</h2>
           <p>
-            I'm baby austin XOXO man bun, kale chips poke hexagon waistcoat
-            ascot. Mumblecore blog hammock, bruh sus echo park photo booth
-            poutine +1 mlkshk tacos ennui venmo.
+            The interactive flashcards made learning languages a breeze. Highly
+            recommended!
           </p>
         </div>
-        <div className="profile-two">
-          <h2>Lorem ipsum dolor</h2>
-          <img className="headshot-images" src={profile2} alt="" />
+        <div className="profile profile-two">
+          <img className="headshot-images" src={profile2} alt="Profile 2" />
+          <h3>Jane</h3>
+          <h2>Traveler</h2>
           <p>
-            I'm baby locavore art party franzen kinfolk. Brunch yr hell of
-            dreamcatcher, next level kogi subway tile truffaut pour-over hashtag
-            mumblecore tbh microdosing stumptown cred.
+            A game-changer for communicating with locals during my travels. Love
+            it!
           </p>
         </div>
-        <div className="profile-three">
-          <h2>Lorem ipsum dolor</h2>
-          <img className="headshot-images" src={profile3} alt="" />
+        <div className="profile profile-three">
+          <img className="headshot-images" src={profile3} alt="Profile 3" />
+          <h3>Sarh</h3>
+          <h2>Business Professional</h2>
           <p>
-            I'm baby asymmetrical meditation neutra affogato farm-to-table, raw
-            denim celiac skateboard ennui taxidermy praxis pabst scenester banh
-            mi.
+            Mastered multiple languages, expanding my business worldwide.
+            Outstanding!
           </p>
         </div>
       </div>
@@ -54,24 +54,32 @@ const Wrapper = styled.div`
     margin: 1rem;
   }
 
+  .profile {
+    background-color: #f6f7fb;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .profile:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+
   .headshot-images {
     object-fit: cover;
-    border-radius: 50%;
-    width: 50%;
-  }
-  @media screen and (min-width: 750px) {
+    border-radius: 5px;
+    width: 80%;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 750px) {
     .testimonial-container {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    .headshot-images {
-      object-fit: cover;
-      border-radius: 50%;
-      width: 50%;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      align-items: center;
+      justify-content: center;
     }
   }
 `;

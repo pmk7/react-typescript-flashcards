@@ -11,8 +11,8 @@ const Button: FC<ButtonProps> = ({ children, onClick }) => {
 };
 
 const Wrapper = styled.button`
-  font-size: 0.8rem;
-  padding: 0.25rem 0.75rem;
+  font-size: 0.5rem;
+  padding: 0.25rem 0.5rem;
   background-color: var(--color-primary);
   color: #fff;
   border: none;
@@ -22,12 +22,9 @@ const Wrapper = styled.button`
 
   &:hover {
     background-color: var(--color-secondary);
-
   }
-}
 
-@media screen and (min-width: 768px) {
-  .nav-btn {
+  @media screen and (min-width: 768px) {
     font-size: 1rem;
     padding: 0.5rem 1.5rem;
     border-radius: 4px;
@@ -35,6 +32,8 @@ const Wrapper = styled.button`
 
   @media screen and (min-width: 1200px) {
     font-size: 1.2rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
   }
 `;
 
