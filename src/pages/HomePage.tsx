@@ -6,12 +6,12 @@ import Science from "../components/Science";
 
 const HomePage = () => {
   return (
-    <main>
+    <>
       <Hero />
       <Concept />
       <Science />
       <Testimonial />
-    </main>
+    </>
   );
 };
 
