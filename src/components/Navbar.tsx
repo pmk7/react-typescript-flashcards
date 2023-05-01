@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import logo from "../assets/logo.png";
 import logo2 from "../assets/logo2.svg";
 import menu from "../assets/menu.svg";
 import Button from "./Button";
 import LinkButton from "./LinkButton";
 import Sidebar from "./Sidebar";
+import Menu from "./Menu";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -20,13 +21,15 @@ const Navbar = () => {
 
   return (
     <Wrapper>
-      <NavbarContainer>
-        <NavLeft>
-          <MenuButton onClick={toggleSidebar}>
-            <img src={menu} alt="menu" />
-          </MenuButton>
-          <Logo src={logo2} alt="logo" />
-          <NavLinksDesktop>
+      <div className="navbar-container">
+        <div className="nav-left">
+          <Menu></Menu>
+          <div className="logo-container">
+            <Link to="/">
+              <img className="logo" src={logo2} alt="logo" />
+            </Link>
+          </div>
+          <ul className="nav-links-desktop">
             <li>
               <LinkButton to="/">Home</LinkButton>
             </li>
@@ -36,22 +39,19 @@ const Navbar = () => {
             <li>
               <LinkButton to="/about">About</LinkButton>
             </li>
-            <li>
-              <LinkButton to="/contact">Contact</LinkButton>
-            </li>
-          </NavLinksDesktop>
-        </NavLeft>
-        <NavRight>
-          <NavLinks>
+          </ul>
+        </div>
+        <div className="nav-right">
+          <ul className="nav-links">
             <li>
               <Button onClick={handleClick}>Login</Button>
             </li>
             <li>
               <Button onClick={handleClick}>Sign Up</Button>
             </li>
-          </NavLinks>
-        </NavRight>
-      </NavbarContainer>
+          </ul>
+        </div>
+      </div>
       {showSidebar && <Sidebar />}
     </Wrapper>
   );
@@ -66,68 +66,82 @@ const Wrapper = styled.div`
   position: sticky;
   top: 0;
   z-index: 1000;
-`;
-const NavbarContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 0 1rem;
-`;
+  height: 4rem;
 
-const NavLeft = styled.div`
-  display: flex;
-  align-items: center;
-`;
-
-const MenuButton = styled.button`
-  cursor: pointer;
-  height: 2rem;
-  background-color: white;
-  border: none;
-  display: inline-flex;
-
-  @media screen and (min-width: 1200px) {
-    display: none;
-  }
-`;
-
-const Logo = styled.img`
-  height: 3rem;
-  margin-left: 1rem;
-
-  @media screen and (min-width: 1200px) {
-    height: 5rem;
-  }
-`;
-
-const NavLinksDesktop = styled.ul`
-  display: none;
-  list-style: none;
-  margin-left: 1rem;
-
-  li {
-    display: inline;
-    margin-right: 1rem;
-  }
-
-  @media screen and (min-width: 1200px) {
+  .navbar-container {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 1rem;
   }
-`;
 
-const NavRight = styled.div`
-  display: flex;
-  align-items: center;
-`;
+  .nav-left {
+    display: flex;
+    align-items: center;
+  }
 
-const NavLinks = styled.ul`
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  .menu {
+    height: 2rem;
+  }
+
+  .menu-button {
+    cursor: pointer;
+    background-color: white;
+    border: none;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+
+  .logo {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    height: 3rem;
+  }
+
+  .nav-links-desktop {
+    display: none;
+    list-style: none;
+    margin-left: 1rem;
+
+    li {
+      display: inline;
+      margin-right: 1rem;
+    }
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
   @media screen and (min-width: 1200px) {
+    .menu {
+      display: none;
+    }
+
+    .nav-links-desktop {
+      display: flex;
+    }
+
+    .logo {
+      height: 4rem;
+    }
+
+    .logo-container {
+    }
   }
 `;
 

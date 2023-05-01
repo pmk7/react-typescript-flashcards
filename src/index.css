@@ -2,7 +2,7 @@
 
 :root {
   --color-primary: #4255ff;
-  --color-secondary: #f6d8fe;
+  --color-secondary: #ffa726;
   --main-white: #fff;
   --off-white: #f7f7f7;
   --main-grey: #f6f7fb;
@@ -12,6 +12,8 @@
   --wordSpacing: 0.3rem;
   --letterSpacing: 0.1rem;
   --lightShadow: 2px 5px 6px 6px rgba(0, 0, 0, 0.5);
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
 }
 
 * {
@@ -25,6 +27,9 @@ body {
   font-family: "Roboto", sans-serif;
   word-spacing: var(--spacing);
   letter-spacing: var(--letterSpacing);
+}
+p {
+  word-spacing: var(--wordSpacing);
 }
 
 li {

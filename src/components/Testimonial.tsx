@@ -23,17 +23,18 @@ const Testimonial = () => {
 };
 
 const Wrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
 
   .testimonial * {
     margin: 1rem;
   }
 
   .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     background-color: #f6f7fb;
     padding: 1rem;
     border-radius: 5px;

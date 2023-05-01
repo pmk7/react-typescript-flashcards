@@ -26,9 +26,6 @@ const Footer = () => {
           <li>
             <LinkButton to="/about">About</LinkButton>
           </li>
-          <li>
-            <LinkButton to="/contact">Contact</LinkButton>
-          </li>
         </ul>
       </div>
     </Wrapper>
@@ -36,7 +33,7 @@ const Footer = () => {
 };
 
 const Wrapper = styled.footer`
-  height: 3rem;
+  height: 4rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
