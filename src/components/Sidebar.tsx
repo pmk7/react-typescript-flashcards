@@ -1,22 +1,23 @@
-import React, { MouseEvent, useState } from "react"; // Change MouseEvent to ReactMouseEvent
+import React, { MouseEvent, useState } from "react";
 import styled from "styled-components";
-import close from "../assets/x.svg";
+import { useAppContext } from "../context/AppContext";
 
-interface SidebarProps {}
-
-const Sidebar: React.FC<SidebarProps> = () => {
+const Sidebar: React.FC = () => {
+  const { menuOpen } = useAppContext();
   const handleClose = (event: MouseEvent<HTMLButtonElement>) => {
-    // Change MouseEvent to ReactMouseEvent
     console.log("Close sidebar");
   };
 
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
 
   return (
     <SidebarContainer>
       <aside className={`${sidebarOpen ? "sidebar show-sidebar" : "sidebar"}`}>
         <div className="sidebar-header">
-          <img src={close} className="close-btn" alt="close" />
+          <img className="close-btn" alt="close" />
         </div>
         <ul className="links">
           <li>

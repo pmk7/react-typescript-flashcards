@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import Button from "./Button";
+import Flashcard from "./Flashcard";
 
 const MySets = () => {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -17,20 +18,9 @@ const MySets = () => {
     <Wrapper>
       <main className="my-sets">
         <h1>German</h1>
-        <div className="sets-btns">
-          <Button onClick={handleButtonClick}>Flashcards</Button>
-          <Button onClick={handleButtonClick}>Learn</Button>
-          <Button onClick={handleButtonClick}>Test</Button>
-          <Button onClick={handleButtonClick}>Match</Button>
-        </div>
+        <div className="sets-btns"></div>
         <div className="card-container">
-          <div
-            className={`card${isFlipped ? " flip" : ""}`}
-            onClick={handleCardClick}
-          >
-            <div className="card-side german">Apfel</div>
-            <div className="card-side english">Apple</div>
-          </div>
+          <Flashcard front="Äpfel" back="apples" />
         </div>
       </main>
     </Wrapper>

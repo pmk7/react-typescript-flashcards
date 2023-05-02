@@ -1,6 +1,9 @@
 import profile1 from "../assets/profile1.jpg";
 import profile2 from "../assets/profile2.jpg";
 import profile3 from "../assets/profile3.jpg";
+import CreateSvg from "../assets/create.svg";
+import StudySvg from "../assets/study.svg";
+import AchieveSvg from "../assets/achieve.svg";
 
 export const testimonials = [
   {
@@ -26,5 +29,26 @@ export const testimonials = [
     quote:
       "Mastered multiple languages, expanding my business worldwide. Outstanding!",
     image: profile3,
+  },
+];
+
+export const steps = [
+  {
+    id: 1,
+    image: CreateSvg,
+    title: "Create Flashcards",
+    text: "Build your personalized flashcard sets with ease.",
+  },
+  {
+    id: 2,
+    image: StudySvg,
+    title: "Study",
+    text: "Learn at your own pace and track your progress.",
+  },
+  {
+    id: 3,
+    image: AchieveSvg,
+    title: "Achieve Goals",
+    text: "Master languages and reach your learning objectives.",
   },
 ];

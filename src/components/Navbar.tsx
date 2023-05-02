@@ -8,7 +8,7 @@ import Sidebar from "./Sidebar";
 import Menu from "./Menu";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
   const [showSidebar, setShowSidebar] = useState(false);
 
   const handleClick = () => {
@@ -23,7 +23,9 @@ const Navbar = () => {
     <Wrapper>
       <div className="navbar-container">
         <div className="nav-left">
-          <Menu></Menu>
+          <div className="menu">
+            <Menu />
+          </div>
           <div className="logo-container">
             <Link to="/">
               <img className="logo" src={logo2} alt="logo" />
@@ -67,6 +69,7 @@ const Wrapper = styled.div`
   top: 0;
   z-index: 1000;
   height: 4rem;
+  margin-top: 1rem;
 
   .navbar-container {
     display: flex;
@@ -79,10 +82,6 @@ const Wrapper = styled.div`
   .nav-left {
     display: flex;
     align-items: center;
-  }
-
-  .menu {
-    height: 2rem;
   }
 
   .menu-button {
@@ -128,12 +127,12 @@ const Wrapper = styled.div`
   }
 
   @media screen and (min-width: 1200px) {
-    .menu {
-      display: none;
-    }
-
     .nav-links-desktop {
       display: flex;
+    }
+
+    .menu {
+      display: none;
     }
 
     .logo {

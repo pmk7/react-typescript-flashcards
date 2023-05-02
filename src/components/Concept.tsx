@@ -1,29 +1,29 @@
 import React from "react";
 import styled from "styled-components";
-import CreateSvg from "../assets/create.svg";
-import StudySvg from "../assets/study.svg";
-import AchieveSvg from "../assets/achieve.svg";
+import { steps } from "../utils/constants";
+
+interface Step {
+  id: number;
+  title: string;
+  text: string;
+  image: string;
+}
 
 const Concept = () => {
   return (
     <Wrapper>
       <h2>How It Works</h2>
       <Steps>
-        <Step>
-          <img src={CreateSvg} alt="Create flashcards" />
-          <h3>Create Flashcards</h3>
-          <p>Build your personalized flashcard sets with ease.</p>
-        </Step>
-        <Step>
-          <img src={StudySvg} alt="Study" />
-          <h3>Study</h3>
-          <p>Learn at your own pace and track your progress.</p>
-        </Step>
-        <Step>
-          <img src={AchieveSvg} alt="Achieve goals" />
-          <h3>Achieve Goals</h3>
-          <p>Master languages and reach your learning objectives.</p>
-        </Step>
+        {steps.map((step) => {
+          const { id, title, text, image } = step;
+          return (
+            <Step key={id}>
+              <img src={image} alt={title} />
+              <h3>{title}</h3>
+              <p>{text}</p>
+            </Step>
+          );
+        })}
       </Steps>
     </Wrapper>
   );

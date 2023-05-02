@@ -1,13 +1,9 @@
-// Menu.js
 import React, { useState } from "react";
 import styled from "styled-components";
+import { useAppContext } from "../context/AppContext";
 
-const Menu = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
+const Menu: React.FC = () => {
+  const { menuOpen, toggleMenu } = useAppContext();
 
   return (
     <HamburgerMenu onClick={toggleMenu} className={menuOpen ? "change" : ""}>
@@ -48,6 +44,10 @@ const Bar = styled.div`
 
   ${HamburgerMenu}.change &.bar3 {
     transform: rotate(-45deg);
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: none;
   }
 `;
 
