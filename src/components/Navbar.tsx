@@ -7,9 +7,11 @@ import LinkButton from "./LinkButton";
 import Sidebar from "./Sidebar";
 import Menu from "./Menu";
 import { Link } from "react-router-dom";
+import { useAppContext } from "../context/AppContext";
 
 const Navbar: React.FC = () => {
   const [showSidebar, setShowSidebar] = useState(false);
+  const { closeMenu } = useAppContext();
 
   const handleClick = () => {
     console.log("btn clicked");
@@ -28,7 +30,12 @@ const Navbar: React.FC = () => {
           </div>
           <div className="logo-container">
             <Link to="/">
-              <img className="logo" src={logo2} alt="logo" />
+              <img
+                className="logo"
+                src={logo2}
+                onClick={closeMenu}
+                alt="logo"
+              />
             </Link>
           </div>
           <ul className="nav-links-desktop">
