@@ -4,18 +4,17 @@ import { useAppContext } from "../context/AppContext";
 
 const Sidebar: React.FC = () => {
   const { menuOpen } = useAppContext();
-  const handleClose = (event: MouseEvent<HTMLButtonElement>) => {
-    console.log("Close sidebar");
-  };
 
   const [sidebarOpen, setSidebarOpen] = useState(false);
+
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
+    console.log("Toggle sidebar");
   };
 
   return (
     <SidebarContainer>
-      <aside className={`${sidebarOpen ? "sidebar show-sidebar" : "sidebar"}`}>
+      <aside className={`${menuOpen ? "sidebar show-sidebar" : "sidebar"}`}>
         <div className="sidebar-header">
           <img className="close-btn" alt="close" />
         </div>
@@ -49,7 +48,7 @@ const SidebarContainer = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--off-white);
+    background: var(--main-white);
     transition: var(--transition);
     transform: translate(-100%);
     z-index: -1;

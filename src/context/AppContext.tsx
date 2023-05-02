@@ -21,6 +21,7 @@ export const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
+    console.log("Toggle menu");
     setMenuOpen(!menuOpen);
   };
 
