@@ -2,10 +2,18 @@ import React from "react";
 import styled from "styled-components";
 import { testimonials } from "../utils/constants";
 
-const Testimonial = () => {
+interface TestimonialProps {
+  id: number;
+  name: string;
+  title: string;
+  quote: string;
+  image: string;
+}
+
+const Testimonial: React.FC = () => {
   return (
     <Wrapper>
-      {testimonials.map((testimonial) => {
+      {testimonials.map((testimonial: TestimonialProps) => {
         const { id, name, title, quote, image } = testimonial;
         return (
           <div className="testimonial" key={id}>
@@ -24,7 +32,7 @@ const Testimonial = () => {
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: 1fr;
 
   .testimonial * {
     margin: 1rem;
@@ -35,7 +43,7 @@ const Wrapper = styled.div`
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-color: #f6f7fb;
+    background-color: var(--off-white);
     padding: 1rem;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -53,12 +61,29 @@ const Wrapper = styled.div`
     width: 80%;
   }
 
-  @media screen and (min-width: 750px) {
+  @media screen and (min-width: 778px) {
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    align-items: center;
+    justify-content: center; */
+  }
+
+  @media screen and (min-width: 1200px) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     align-items: center;
     justify-content: center;
+    margin: 1rem;
+  }
+
+  h4 {
+    font-size: 1.6rem;
+  }
+
+  p {
+    font-size: 1.4rem;
   }
 `;
 

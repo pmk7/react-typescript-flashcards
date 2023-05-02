@@ -17,10 +17,6 @@ const Navbar: React.FC = () => {
     console.log("btn clicked");
   };
 
-  const toggleSidebar = () => {
-    setShowSidebar(!showSidebar);
-  };
-
   return (
     <Wrapper>
       <div className="navbar-container">

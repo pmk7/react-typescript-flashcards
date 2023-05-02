@@ -10,7 +10,8 @@ export const testimonials = [
     id: 1,
     name: "John",
     title: "Language Enthusiast",
-    quote: "The interactive flashcards made learning French a breeze!",
+    quote:
+      "The interactive flashcards made learning French a breeze! Highly recommend!",
     image: profile1,
   },
 

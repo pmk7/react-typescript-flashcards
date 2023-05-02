@@ -1,22 +1,28 @@
 import React from "react";
 import styled from "styled-components";
-import social1 from "../assets/github.svg";
-import social2 from "../assets/linkedin.svg";
 import LinkButton from "./LinkButton";
+import githubLogo from "../assets/githubLogo.svg";
+import linkedinLogo from "../assets/linkedinLogo.svg";
+import codewarsLogo from "../assets/codewarsLogo.svg";
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <Wrapper>
       <div className="footer-left">
         <ul>
           <li>
-            <a href="#">
-              <img src={social2} alt="github" />
+            <a href="https://github.com/pmk7">
+              <img src={githubLogo} alt="github" />
             </a>
           </li>
           <li>
-            <a href="#">
-              <img src={social1} alt="linkedin" />
+            <a href="https://www.linkedin.com/in/philipkeogh/">
+              <img src={linkedinLogo} alt="linkedin" />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.codewars.com/users/pmk7">
+              <img src={codewarsLogo} alt="codewars" />
             </a>
           </li>
         </ul>

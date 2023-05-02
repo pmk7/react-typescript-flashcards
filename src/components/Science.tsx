@@ -28,6 +28,7 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
+  margin: 1rem;
 
   .content {
     text-align: center;
@@ -66,7 +67,7 @@ const Wrapper = styled.div`
     }
 
     p {
-      font-size: 1rem;
+      font-size: 1.4rem;
     }
 
     .content {
