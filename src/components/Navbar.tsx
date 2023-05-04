@@ -6,6 +6,7 @@ import Button from "./Button";
 import LinkButton from "./LinkButton";
 import Sidebar from "./Sidebar";
 import Menu from "./Menu";
+import FontControl from "./FontControl";
 import { Link } from "react-router-dom";
 import { useAppContext } from "../context/AppContext";
 
@@ -15,6 +16,14 @@ const Navbar: React.FC = () => {
 
   const handleClick = () => {
     console.log("btn clicked");
+  };
+
+  const increaseFont = () => {
+    console.log("increase font");
+  };
+
+  const decreaseFont = () => {
+    console.log("decrease font");
   };
 
   return (
@@ -43,6 +52,12 @@ const Navbar: React.FC = () => {
             </li>
             <li>
               <LinkButton to="/about">About</LinkButton>
+            </li>
+            <li>
+              <FontControl
+                increaseFont={increaseFont}
+                decreaseFont={decreaseFont}
+              />
             </li>
           </ul>
         </div>
@@ -130,6 +145,8 @@ const Wrapper = styled.div`
   }
 
   @media screen and (min-width: 1200px) {
+    margin-top: 2rem;
+
     .nav-links-desktop {
       display: flex;
     }
