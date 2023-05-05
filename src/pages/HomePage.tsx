@@ -4,7 +4,7 @@ import Testimonial from "../components/Testimonial";
 import Concept from "../components/Concept";
 import Science from "../components/Science";
 
-const HomePage = () => {
+const HomePage: React.FC = () => {
   return (
     <>
       <Hero />

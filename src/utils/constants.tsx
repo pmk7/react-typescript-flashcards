@@ -5,7 +5,22 @@ import CreateSvg from "../assets/create.svg";
 import StudySvg from "../assets/study.svg";
 import AchieveSvg from "../assets/achieve.svg";
 
-export const testimonials = [
+interface Testimonial {
+  id: number;
+  name: string;
+  title: string;
+  quote: string;
+  image: string;
+}
+
+interface Step {
+  id: number;
+  image: string;
+  title: string;
+  text: string;
+}
+
+export const testimonials: Testimonial[] = [
   {
     id: 1,
     name: "John",
@@ -33,7 +48,7 @@ export const testimonials = [
   },
 ];
 
-export const steps = [
+export const steps: Step[] = [
   {
     id: 1,
     image: CreateSvg,
