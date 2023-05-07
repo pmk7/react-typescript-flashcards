@@ -19,8 +19,8 @@ const Testimonial: React.FC = () => {
           <div className="testimonial" key={id}>
             <div className="profile">
               <img src={image} alt={name} className="headshot-images" />
-              <h4>{name}</h4>
-              <p>{title}</p>
+              <h3>{name}</h3>
+              <h4>{title}</h4>
               <p>{quote}</p>
             </div>
           </div>
@@ -62,11 +62,6 @@ const Wrapper = styled.div`
   }
 
   @media screen and (min-width: 778px) {
-    /* display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    align-items: center;
-    justify-content: center; */
   }
 
   @media screen and (min-width: 1200px) {
@@ -78,12 +73,21 @@ const Wrapper = styled.div`
     margin: 1rem;
   }
 
-  h4 {
+  .headshot-images {
+    width: 15rem;
+    height: 12rem;
+  }
+
+  h3 {
     font-size: 1.6rem;
   }
 
-  p {
+  h4 {
     font-size: 1.4rem;
+  }
+
+  p {
+    font-size: 1.3rem;
   }
 `;
 

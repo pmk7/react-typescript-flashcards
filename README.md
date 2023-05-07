@@ -44,4 +44,18 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
 # react-typescript-flashcards
+
+// User survey //
+
+1. On a scale of 1 to 10 (1 being the lowest and 10 being the highest), how would you rate the overall visual design of the app?
+2. How appealing did you find the color scheme used in the app? (1 = Not appealing, 10 = Very appealing)
+3. How easy was it to read and understand the text and fonts used in the app? (1 = Very difficult, 10 = Very easy)
+4. How would you rate the layout and organization of the app's interface? (1 = Poor, 10 = Excellent)
+5. Did you find the images, icons, and other visual elements in the app to be clear and high-quality? (1 = Low quality, 10 = High quality)
+6. Were there any visual elements or design choices that you found distracting or confusing? If so, please provide details.
+7. How well do you feel the app's visual design reflects its purpose or functionality? (1 = Not well, 10 = Very well)
+8. What is your favorite visual aspect of the app, and why?
+9. Are there any visual elements or aspects of the app that you think could be improved or changed? If so, please provide details.
+10. Do you have any additional feedback or suggestions on how we can improve the app's visual design to create a better user experience?

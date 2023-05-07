@@ -98,6 +98,9 @@ const Wrapper = styled.div`
 
   @media only screen and (min-width: 768px) {
     .card-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       max-width: 40rem;
     }
 

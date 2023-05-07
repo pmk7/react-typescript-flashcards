@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import LinkButton from "./LinkButton";
+import { Link } from "react-router-dom";
 import githubLogo from "../assets/githubLogo.svg";
 import linkedinLogo from "../assets/linkedinLogo.svg";
 import codewarsLogo from "../assets/codewarsLogo.svg";
@@ -29,8 +30,8 @@ const Footer: React.FC = () => {
       </div>
       <div className="footer-right">
         <ul>
-          <li>
-            <LinkButton to="/about">About</LinkButton>
+          <li className="about">
+            <Link to="/about">About</Link>
           </li>
         </ul>
       </div>
@@ -65,6 +66,22 @@ const Wrapper = styled.footer`
   img {
     width: 24px;
     height: 24px;
+  }
+
+  .footer-right .about {
+    font-size: 1.2rem;
+    color: var(--color-primary);
+  }
+
+  .footer-right .about a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s;
+  }
+
+  .footer-right .about a:hover,
+  .footer-right .about a:focus {
+    color: var(--color-secondary);
   }
 `;
 
