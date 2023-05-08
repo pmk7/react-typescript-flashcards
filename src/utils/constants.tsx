@@ -1,6 +1,9 @@
 import profile1 from "../assets/profile1.jpg";
 import profile2 from "../assets/profile2.jpg";
 import profile3 from "../assets/profile3.jpg";
+import profile11 from "../assets/profile11.jpg";
+import profile22 from "../assets/profile22.jpg";
+import profile33 from "../assets/profile33.jpg";
 import CreateSvg from "../assets/create.svg";
 import StudySvg from "../assets/study.svg";
 import AchieveSvg from "../assets/achieve.svg";
@@ -27,7 +30,7 @@ export const testimonials: Testimonial[] = [
     title: "Language Enthusiast",
     quote:
       "The interactive flashcards made learning French a breeze! Highly recommend!",
-    image: profile1,
+    image: profile11,
   },
 
   {
@@ -36,7 +39,7 @@ export const testimonials: Testimonial[] = [
     title: "Traveler",
     quote:
       "A game-changer for communicating with locals during my travels. Love it!",
-    image: profile2,
+    image: profile22,
   },
   {
     id: 3,
@@ -44,7 +47,7 @@ export const testimonials: Testimonial[] = [
     title: "Business Professional",
     quote:
       "Mastered multiple languages, expanding my business worldwide. Outstanding!",
-    image: profile3,
+    image: profile33,
   },
 ];
 
