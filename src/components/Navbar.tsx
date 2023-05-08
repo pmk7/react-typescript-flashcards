@@ -6,13 +6,16 @@ import Button from "./Button";
 import LinkButton from "./LinkButton";
 import Sidebar from "./Sidebar";
 import Menu from "./Menu";
+import LogoutButton from "./Logout";
 import FontControl from "./FontControl";
 import { Link } from "react-router-dom";
 import { useAppContext } from "../context/AppContext";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Navbar: React.FC = () => {
   const [showSidebar, setShowSidebar] = useState(false);
   const { closeMenu } = useAppContext();
+  const { loginWithRedirect, logout, user } = useAuth0();
 
   const handleClick = () => {
     console.log("btn clicked");
@@ -48,7 +51,7 @@ const Navbar: React.FC = () => {
               <LinkButton to="/">Home</LinkButton>
             </li>
             <li>
-              <LinkButton to="/mysets">My Sets</LinkButton>
+              <LinkButton to="/profile">Profile</LinkButton>
             </li>
             <li>
               <LinkButton to="/about">About</LinkButton>
@@ -64,10 +67,17 @@ const Navbar: React.FC = () => {
         <div className="nav-right">
           <ul className="nav-links">
             <li>
-              <Button onClick={handleClick}>Login</Button>
+              <Button onClick={() => loginWithRedirect()}>Login</Button>
             </li>
             <li>
-              <Button onClick={handleClick}>Sign Up</Button>
+              {user ? (
+                <Button onClick={() => logout()}>
+                  <LogoutButton />
+                  Logout
+                </Button>
+              ) : (
+                <Button onClick={() => loginWithRedirect()}>Sign Up</Button>
+              )}
             </li>
           </ul>
         </div>

@@ -7,6 +7,7 @@ import Testimonial from "./components/Testimonial";
 import Footer from "./components/Footer";
 import MySets from "./components/MySets";
 import Home from "./pages/HomePage";
+import Profile from "./pages/ProfilePage";
 import About from "./components/About";
 import Sidebar from "./components/Sidebar";
 import { AppProvider } from "./context/AppContext";
@@ -19,7 +20,7 @@ function App() {
         <Sidebar />
         <Routes>
           <Route path="/" element={<Home />}></Route>
-          <Route path="/mysets" element={<MySets />} />
+          <Route path="/profile" element={<Profile />} />
           <Route path="/about" element={<About />} />
         </Routes>
         <Footer />

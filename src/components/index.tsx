@@ -6,5 +6,22 @@ import Hero from "./Hero";
 import Navbar from "./Navbar";
 import Testimonial from "./Testimonial";
 import LinkButton from "./LinkButton";
+import Profile from "./Profile";
+import LoginButton from "./Login";
+import LogoutButton from "./Logout";
+import LoginRedirect from "./LoginRedirect";
 
-export { About, MySets, Button, Footer, Hero, Navbar, Testimonial, LinkButton };
+export {
+  About,
+  MySets,
+  Button,
+  Footer,
+  Hero,
+  Navbar,
+  Testimonial,
+  LinkButton,
+  Profile,
+  LoginButton,
+  LogoutButton,
+  LoginRedirect,
+};
