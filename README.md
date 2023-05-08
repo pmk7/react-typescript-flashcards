@@ -8,7 +8,7 @@ Before you begin, you need to have Node.js installed on your computer. Node.js i
 Download the latest LTS (Long Term Support) version of Node.js from the official website: https://nodejs.org/en/download/
 Install Node.js by following the instructions for your operating system (Windows, macOS, or Linux).
 
-1. Download the zip file or cloned the repo onto your machine
+1. Download the zip file or clone the repo onto your machine
 2. Open the folder in your IDE of choice
 3. Open the terminal and run 'npm install'
 4. Next, run 'npm start'
