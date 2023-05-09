@@ -42,9 +42,8 @@ const Wrapper = styled.div`
   }
 
   h1 {
-    margin-top: 3rem;
-    margin-bottom: 2rem;
-    font-size: 2.5rem;
+    margin: 1rem, 0;
+    font-size: 2rem;
     text-align: center;
   }
   .card-container {

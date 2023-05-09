@@ -8,7 +8,6 @@ import Testimonial from "./Testimonial";
 import LinkButton from "./LinkButton";
 import Profile from "./Profile";
 import LoginButton from "./Login";
-import LogoutButton from "./Logout";
 import LoginRedirect from "./LoginRedirect";
 
 export {
@@ -22,6 +21,5 @@ export {
   LinkButton,
   Profile,
   LoginButton,
-  LogoutButton,
   LoginRedirect,
 };

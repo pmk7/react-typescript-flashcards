@@ -1,44 +1,33 @@
-import React, { MouseEvent, useState } from "react";
+import React, { MouseEvent, useState, useEffect } from "react";
 import styled from "styled-components";
 import FontControl from "./FontControl";
 import { useAppContext } from "../context/AppContext";
+import { useAuth0 } from "@auth0/auth0-react";
+import LinkButton from "./LinkButton";
+import { Link } from "react-router-dom";
 
 const Sidebar: React.FC = () => {
-  const { menuOpen } = useAppContext();
-
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-
-  const toggleSidebar = () => {
-    setSidebarOpen(!sidebarOpen);
-    console.log("Toggle sidebar");
-  };
-
-  const increaseFont = () => {
-    console.log("increase font");
-  };
-
-  const decreaseFont = () => {
-    console.log("decrease font");
-  };
+  const { menuOpen, closeMenu } = useAppContext();
+  const { user, isAuthenticated } = useAuth0();
 
   return (
     <SidebarContainer>
       <aside className={`${menuOpen ? "sidebar show-sidebar" : "sidebar"}`}>
         <ul className="links">
           <li>
-            <a href="/">home</a>
+            <Link onClick={closeMenu} to="/">
+              Home
+            </Link>
           </li>
           <li>
-            <a href="/mysets">my sets</a>
+            <Link onClick={closeMenu} to="/profile">
+              Profile
+            </Link>
           </li>
           <li>
-            <a href="/about">about</a>
-          </li>
-          <li>
-            <FontControl
-              increaseFont={increaseFont}
-              decreaseFont={decreaseFont}
-            />
+            <Link onClick={closeMenu} to="/about">
+              About
+            </Link>
           </li>
         </ul>
       </aside>

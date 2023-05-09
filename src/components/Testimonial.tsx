@@ -62,6 +62,10 @@ const Wrapper = styled.div`
   }
 
   @media screen and (min-width: 778px) {
+    .headshot-images {
+      width: 12rem;
+      height: 9rem;
+    }
   }
 
   @media screen and (min-width: 1200px) {

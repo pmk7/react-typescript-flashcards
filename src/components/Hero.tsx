@@ -3,8 +3,10 @@ import styled from "styled-components";
 import hero from "../assets/hero.jpg";
 import mountain from "../assets/mountain.svg";
 import Button from "./Button";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Hero = () => {
+  const { loginWithRedirect } = useAuth0();
   const handleClick = () => {
     console.log("Button clicked");
   };
@@ -19,7 +21,7 @@ const Hero = () => {
             Master vocabulary and grammar effortlessly with captivating,
             interactive flashcards. Embark on your linguistic adventure today!
           </p>
-          <button onClick={handleClick} className="hero-btn">
+          <button onClick={() => loginWithRedirect()} className="hero-btn">
             Sign Up
           </button>
         </div>
@@ -60,14 +62,14 @@ const Wrapper = styled.div`
   }
 
   .hero-text h1 {
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: var(--main-yellow);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
 
   .hero-text p {
-    font-size: 0.7rem;
+    font-size: 1rem;
     line-height: 1.6;
     color: #333;
   }

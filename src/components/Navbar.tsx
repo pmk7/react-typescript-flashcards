@@ -6,7 +6,6 @@ import Button from "./Button";
 import LinkButton from "./LinkButton";
 import Sidebar from "./Sidebar";
 import Menu from "./Menu";
-import LogoutButton from "./Logout";
 import FontControl from "./FontControl";
 import { Link } from "react-router-dom";
 import { useAppContext } from "../context/AppContext";
@@ -16,18 +15,6 @@ const Navbar: React.FC = () => {
   const [showSidebar, setShowSidebar] = useState(false);
   const { closeMenu } = useAppContext();
   const { loginWithRedirect, logout, user } = useAuth0();
-
-  const handleClick = () => {
-    console.log("btn clicked");
-  };
-
-  const increaseFont = () => {
-    console.log("increase font");
-  };
-
-  const decreaseFont = () => {
-    console.log("decrease font");
-  };
 
   return (
     <Wrapper>
@@ -56,23 +43,24 @@ const Navbar: React.FC = () => {
             <li>
               <LinkButton to="/about">About</LinkButton>
             </li>
-            <li>
-              <FontControl
-                increaseFont={increaseFont}
-                decreaseFont={decreaseFont}
-              />
-            </li>
           </ul>
         </div>
         <div className="nav-right">
           <ul className="nav-links">
             <li>
-              <Button onClick={() => loginWithRedirect()}>Login</Button>
+              {!user ? (
+                <Button onClick={() => loginWithRedirect()}>Login</Button>
+              ) : null}
             </li>
             <li>
               {user ? (
-                <Button onClick={() => logout()}>
-                  <LogoutButton />
+                <Button
+                  onClick={() =>
+                    logout({
+                      logoutParams: { returnTo: window.location.origin },
+                    })
+                  }
+                >
                   Logout
                 </Button>
               ) : (

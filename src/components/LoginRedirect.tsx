@@ -19,32 +19,48 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: ;
   width: 100%;
   height: 100vh;
-  background-color: #f5f5f5;
+  background-color: var(--main-white);
 
   h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 1.5rem;
+    margin: 1rem;
   }
 
   .button-container {
     display: flex;
-    gap: 10px;
+    gap: 0.625rem;
 
     button {
       background-color: var(--color-primary);
-      color: var(--off-white);
-      padding: 10px 20px;
+      color: #ffffff;
+      padding: 0.625rem 1.25rem;
       border: none;
-      border-radius: 4px;
-      font-size: 18px;
+      border-radius: 0.25rem;
+      font-size: 1.125rem;
       cursor: pointer;
       transition: background-color 0.3s;
 
       &:hover {
         background-color: var(--color-secondary);
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 1.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .button-container {
+      gap: 0.75rem;
+
+      button {
+        padding: 0.75rem 1.5rem;
+        font-size: 1.25rem;
       }
     }
   }
