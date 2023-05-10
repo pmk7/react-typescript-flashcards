@@ -27,6 +27,12 @@ const Wrapper = styled.div`
     border-top-color: blue;
     animation: spinner 0.6s linear infinite;
   }
+
+  @keyframes spinner {
+    to {
+      transform: rotate(360deg);
+    }
+  }
 `;
 
 export default Loading;

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import logo2 from "../assets/logo2.svg";
 import menu from "../assets/menu.svg";
@@ -10,13 +10,16 @@ import FontControl from "./FontControl";
 import { Link } from "react-router-dom";
 import { useAppContext } from "../context/AppContext";
 import { useAuth0 } from "@auth0/auth0-react";
+import Loading from "./Loading";
 
 const Navbar: React.FC = () => {
   const [showSidebar, setShowSidebar] = useState(false);
   const { closeMenu } = useAppContext();
-  const { loginWithRedirect, logout, user } = useAuth0();
+  const { loginWithRedirect, logout, user, isLoading } = useAuth0();
 
-  return (
+  return isLoading ? (
+    <Loading />
+  ) : (
     <Wrapper>
       <div className="navbar-container">
         <div className="nav-left">
