@@ -58,7 +58,7 @@ const Wrapper = styled.div`
     align-items: center;
     background-color: white;
     border-radius: 1rem;
-    box-shadow: var(--darkShadow);
+    box-shadow: var(--dark-shadow);
     padding: 2rem;
     margin-bottom: 2rem;
   }

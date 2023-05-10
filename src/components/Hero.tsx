@@ -6,10 +6,7 @@ import Button from "./Button";
 import { useAuth0 } from "@auth0/auth0-react";
 
 const Hero = () => {
-  const { loginWithRedirect } = useAuth0();
-  const handleClick = () => {
-    console.log("Button clicked");
-  };
+  const { loginWithRedirect, user } = useAuth0();
 
   return (
     <Wrapper>
@@ -21,9 +18,11 @@ const Hero = () => {
             Master vocabulary and grammar effortlessly with captivating,
             interactive flashcards. Embark on your linguistic adventure today!
           </p>
-          <button onClick={() => loginWithRedirect()} className="hero-btn">
-            Sign Up
-          </button>
+          {!user ? (
+            <button onClick={() => loginWithRedirect()} className="hero-btn">
+              Sign Up
+            </button>
+          ) : null}
         </div>
       </div>
     </Wrapper>

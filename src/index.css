@@ -12,9 +12,9 @@
   --wordSpacing: 0.3rem;
   --letterSpacing: 0.1rem;
   --lightShadow: 2px 5px 6px 6px rgba(0, 0, 0, 0.5);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   --transition: all 0.3s linear;
   --spacing: 0.1rem;
-  --global-font-size: 16px;
 }
 
 * {
