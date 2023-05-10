@@ -55,7 +55,7 @@ const Step = styled.div`
   background-color: var(--off-white);
   border-radius: 4px;
   padding: 1.5rem;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--light-shadow);
 
   img {
     width: 120px;
