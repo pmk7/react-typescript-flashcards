@@ -1,14 +1,11 @@
-import React, { MouseEvent, useState, useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
-import FontControl from "./FontControl";
 import { useAppContext } from "../context/AppContext";
 import { useAuth0 } from "@auth0/auth0-react";
-import LinkButton from "./LinkButton";
 import { Link } from "react-router-dom";
 
 const Sidebar: React.FC = () => {
   const { menuOpen, closeMenu } = useAppContext();
-  const { user, isAuthenticated } = useAuth0();
 
   return (
     <SidebarContainer>

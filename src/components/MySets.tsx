@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Button from "./Button";
 import Flashcard from "./Flashcard";
 
-const MySets = () => {
+const MySets: React.FC = () => {
   const [isFlipped, setIsFlipped] = useState(false);
 
   const handleButtonClick = () => {
