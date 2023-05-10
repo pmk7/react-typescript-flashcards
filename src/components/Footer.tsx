@@ -44,7 +44,7 @@ const Wrapper = styled.footer`
   justify-content: space-between;
   align-items: center;
   background-color: white;
-  padding: 0 2rem;
+  padding: 0 1rem;
 
   ul {
     display: flex;
@@ -81,6 +81,7 @@ const Wrapper = styled.footer`
   .footer-right .about a:hover,
   .footer-right .about a:focus {
     color: var(--color-secondary);
+    text-decoration: underline;
   }
 `;
 

@@ -123,7 +123,7 @@ const Wrapper = styled.div`
   }
 
   .logo {
-    margin-left: 1rem;
+    margin-left: 0.5rem;
     margin-bottom: 1rem;
     height: 3rem;
   }

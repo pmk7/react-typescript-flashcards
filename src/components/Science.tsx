@@ -27,7 +27,7 @@ const Wrapper = styled.div`
   flex-direction: column-reverse;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
+  /* padding: 1rem; */
   margin: 1rem;
 
   .content {
@@ -48,7 +48,7 @@ const Wrapper = styled.div`
     width: 100%;
     max-width: 600px;
     border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--light-shadow);
     transition: transform 0.3s, box-shadow 0.3s;
     transform-style: preserve-3d;
   }
@@ -56,6 +56,10 @@ const Wrapper = styled.div`
   .science-image:hover {
     transform: rotateY(20deg) translateY(-10px);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  p {
+    line-height: 1.5rem;
   }
 
   @media screen and (min-width: 1200px) {
@@ -68,12 +72,12 @@ const Wrapper = styled.div`
 
     p {
       font-size: 1.4rem;
+      line-height: 2rem;
     }
 
     .content {
-      text-align: left;
-      margin-bottom: 0;
-      /* margin-right: 2rem; */
+      text-align: center;
+      margin-left: 6rem;
     }
   }
 `;

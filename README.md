@@ -10,7 +10,7 @@ Install Node.js by following the instructions for your operating system (Windows
 
 1. Download the zip file or clone the repo onto your machine
 2. Open the folder in your IDE of choice
-3. Open the terminal and run 'npm install'
+3. Open the terminal and run 'npm install' to install the package dependencies
 4. Next, run 'npm start'
 5. localhost:3000 should open once the app is running, if not, navigate there in your browser
 

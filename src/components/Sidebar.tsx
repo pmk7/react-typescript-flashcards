@@ -70,7 +70,7 @@ const SidebarContainer = styled.div`
     font-size: 1rem;
     text-transform: capitalize;
     padding: 1rem 1.5rem;
-    color: var(--clr-grey-3);
+    color: var(--color-primary);
     transition: var(--transition);
     letter-spacing: var(--spacing);
   }
@@ -78,8 +78,7 @@ const SidebarContainer = styled.div`
   .links a:hover {
     padding: 1rem 1.5rem;
     padding-left: 2rem;
-    background: var(--clr-grey-10);
-    color: var(--clr-grey-2);
+    color: var(--color-secondary);
   }
 `;
 
