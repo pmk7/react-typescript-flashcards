@@ -13,6 +13,7 @@ const Navbar: React.FC = () => {
   const { closeMenu } = useAppContext();
   const { loginWithRedirect, logout, user, isLoading, isAuthenticated } =
     useAuth0();
+
   const [customLoading, setCustomLoading] = useState(true);
 
   useEffect(() => {

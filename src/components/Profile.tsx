@@ -27,7 +27,7 @@ const ProfileWrapper = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 30vh;
+  height: 20vh;
 
   img {
     width: 6.25rem;

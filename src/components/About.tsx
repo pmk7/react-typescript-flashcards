@@ -1,118 +1,76 @@
 import React from "react";
-import styled from "styled-components";
-// import image1 from "../assets/image1.jpg";
-// import image2 from "../assets/image2.jpg";
-// import image3 from "../assets/image3.jpg";
+import styled, { keyframes } from "styled-components";
 
 const About = () => {
   return (
     <Wrapper>
-      <main>
-        <section className="about-section">
-          <div className="content">
-            <h1>About</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-              nec odio.
-            </p>
-          </div>
-          <div className="image-container">
-            {/* <img src={image1} alt="Image 1" /> */}
-          </div>
-        </section>
-        <section className="about-section reversed">
-          <div className="content">
-            <h1>Our Mission</h1>
-            <p>Praesent libero. Sed cursus ante dapibus diam. Sed nisi.</p>
-          </div>
-          <div className="image-container">
-            {/* <img src={image2} alt="Image 2" /> */}
-          </div>
-        </section>
-        <section className="about-section">
-          <div className="content">
-            <h1>Our Vision</h1>
-            <p>
-              Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue
-              semper porta.
-            </p>
-          </div>
-          <div className="image-container">
-            {/* <img src={image3} alt="Image 3" /> */}
-          </div>
-        </section>
-      </main>
+      <div className="wave"></div>
+      <div className="about-container">
+        <h1>About</h1>
+        <p>
+          I started my journey into the world of app development in 2020. After
+          immersing myself in the discipline, I recently graduated with a
+          Professional Diploma in Computer Science from TU Dublin. As a lifelong
+          learner, I continually enhance my skills, specializing in frontend
+          technologies like Typescript, React and Angular. On the backend, I'm
+          comfortable with Node.js, Express, and MongoDB. Right now, I'm excited
+          to be working on a full-stack application incorporating all these
+          technologies.
+        </p>
+        <h1>About This App</h1>
+        <p>
+          This application emphasizes user experience by ensuring intuitive
+          functionality and seamless performance. It's built using modern web
+          technologies such as React, TypeScript, and styled-components for
+          wide-ranging compatibility and responsive design, enhancing its appeal
+          to users.
+        </p>
+      </div>
     </Wrapper>
   );
 };
 
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
+
 const Wrapper = styled.div`
-  main {
-    margin-top: 3rem;
-    padding: 0 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin: 1rem 2rem;
+
+  .about-container {
+    max-width: 800px;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.3);
+    animation: ${fadeIn} 1s ease-in-out;
   }
 
-  .about-section {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    background-color: white;
-    border-radius: 1rem;
-    box-shadow: var(--dark-shadow);
-    padding: 2rem;
-    margin-bottom: 2rem;
-  }
-
-  .about-section.reversed {
-    flex-direction: row-reverse;
-  }
-
-  .content {
-    flex: 1;
-  }
-
-  .image-container {
-    flex: 1;
-    padding: 0 1rem;
-  }
-
-  img {
-    width: 100%;
-    height: auto;
-    border-radius: 1rem;
+  .about-container * {
+    margin: 1rem;
   }
 
   h1 {
-    font-size: 2rem;
     text-align: center;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
+    border-bottom: 2px solid white;
   }
 
   p {
     font-size: 1.2rem;
+    line-height: 1.6;
     text-align: justify;
-  }
-
-  /* Tablet and desktop styles */
-  @media screen and (min-width: 768px) {
-    main {
-      margin-top: 5rem;
-      max-width: 768px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .about-section {
-      padding: 3rem;
-    }
-
-    h1 {
-      font-size: 3rem;
-    }
-
-    p {
-      font-size: 1.5rem;
-    }
+    animation: ${fadeIn} 2s ease-in-out;
   }
 `;
 

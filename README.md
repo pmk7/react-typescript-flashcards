@@ -1,6 +1,6 @@
 # react-typescript-flashcards
 
-This is a simple guide to help you download and run a React app on your machine, even if you haven't used React or npm before.
+This is a simple guide to help you download and run this React app on your machine
 
 Prerequisites
 
