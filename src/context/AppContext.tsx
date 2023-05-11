@@ -8,6 +8,9 @@ interface AppContextValue {
   loginWithRedirect: () => void;
   logout: () => void;
   myUser: any;
+  isLoading: boolean;
+  isAuthenticated: boolean;
+  user: any;
 }
 
 const AppContext = createContext<AppContextValue>({
@@ -17,6 +20,9 @@ const AppContext = createContext<AppContextValue>({
   loginWithRedirect: () => {},
   logout: () => {},
   myUser: null,
+  isLoading: false,
+  isAuthenticated: false,
+  user: null,
 });
 
 export const useAppContext = () => useContext(AppContext);
@@ -27,7 +33,8 @@ interface AppProviderProps {
 
 export const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const { loginWithRedirect, logout, user } = useAuth0();
+  const { loginWithRedirect, logout, user, isAuthenticated, isLoading } =
+    useAuth0();
   const [myUser, setMyUser] = useState<any>(null);
 
   useEffect(() => {
@@ -49,7 +56,10 @@ export const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
         toggleMenu,
         closeMenu,
         loginWithRedirect,
+        isLoading,
+        user,
         logout,
+        isAuthenticated,
         myUser,
       }}
     >

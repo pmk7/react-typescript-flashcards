@@ -28,13 +28,14 @@ const ProfileWrapper = styled.div`
   justify-content: center;
   width: 100%;
   height: 20vh;
+  margin-bottom: 2rem;
 
   img {
     width: 6.25rem;
     height: 6.25rem;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 1rem;
+    margin-bottom: 0.625rem;
   }
 
   h2 {

@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import hero from "../assets/hero.jpg";
 import mountain from "../assets/mountain.svg";
 import Button from "./Button";
 import { useAuth0 } from "@auth0/auth0-react";
+import App from "../App";
+import { useAppContext } from "../context/AppContext";
 
 const Hero = () => {
-  const { loginWithRedirect, user } = useAuth0();
+  const { loginWithRedirect, user } = useAppContext();
 
   return (
     <Wrapper>

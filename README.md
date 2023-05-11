@@ -14,6 +14,10 @@ Install Node.js by following the instructions for your operating system (Windows
 4. Next, run 'npm start'
 5. localhost:3000 should open once the app is running, if not, navigate there in your browser
 
+Login Test Data:
+email: tim@tim.com
+password: Buzzsaw1\*
+
 Note:
 The login and signup redirect is handled by Auth0- the UI is not my work. That aside, all components, pages and context has been written by me.
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import styled from "styled-components";
 import logo2 from "../assets/logo2.svg";
 import Button from "./Button";
@@ -11,6 +11,7 @@ import Loading from "./Loading";
 
 const Navbar: React.FC = () => {
   const { closeMenu } = useAppContext();
+  // fix issue where error in logout onclick when methods imported from useappcontext; temporary fix to use useauth0 hook
   const { loginWithRedirect, logout, user, isLoading, isAuthenticated } =
     useAuth0();
 

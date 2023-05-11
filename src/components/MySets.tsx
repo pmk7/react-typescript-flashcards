@@ -39,10 +39,11 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 1rem;
   }
 
   h1 {
-    margin: 1rem, 0;
+    margin: 2rem, 0;
     font-size: 2rem;
     text-align: center;
   }
