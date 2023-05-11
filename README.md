@@ -14,6 +14,9 @@ Install Node.js by following the instructions for your operating system (Windows
 4. Next, run 'npm start'
 5. localhost:3000 should open once the app is running, if not, navigate there in your browser
 
+Note:
+The login and signup redirect is handled by Auth0- the UI is not my work. That aside, all components, pages and context has been written by me.
+
 // User survey //
 
 1. On a scale of 1 to 10 (1 being the lowest and 10 being the highest), how would you rate the overall visual design of the app?
