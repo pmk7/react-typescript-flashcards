@@ -39,7 +39,7 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
   }
 
   h1 {

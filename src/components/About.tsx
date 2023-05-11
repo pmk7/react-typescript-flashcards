@@ -8,22 +8,20 @@ const About = () => {
       <div className="about-container">
         <h1>About</h1>
         <p>
-          I started my journey into the world of app development in 2020. After
-          immersing myself in the discipline, I recently graduated with a
+          I started programming in 2020 and recently graduated with a
           Professional Diploma in Computer Science from TU Dublin. As a lifelong
           learner, I continually enhance my skills, specializing in frontend
           technologies like Typescript, React and Angular. On the backend, I'm
-          comfortable with Node.js, Express, and MongoDB. Right now, I'm excited
+          comfortable with Python, Node.js and MongoDB. Right now, I'm excited
           to be working on a full-stack application incorporating all these
           technologies.
         </p>
         <h1>About This App</h1>
         <p>
           This application emphasizes user experience by ensuring intuitive
-          functionality and seamless performance. It's built using modern web
-          technologies such as React, TypeScript, and styled-components for
-          wide-ranging compatibility and responsive design, enhancing its appeal
-          to users.
+          functionality and seamless performance. It's built using React,
+          TypeScript, and styled-components on the frontend for wide-ranging
+          compatibility, speed and responsive design
         </p>
       </div>
     </Wrapper>
