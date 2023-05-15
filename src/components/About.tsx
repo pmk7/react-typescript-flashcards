@@ -12,9 +12,7 @@ const About = () => {
           Professional Diploma in Computer Science from TU Dublin. As a lifelong
           learner, I continually enhance my skills, specializing in frontend
           technologies like Typescript, React and Angular. On the backend, I'm
-          comfortable with Python, Node.js and MongoDB. Right now, I'm excited
-          to be working on a full-stack application incorporating all these
-          technologies.
+          comfortable with Python, Node.js and MongoDB.
         </p>
         <h1>About This App</h1>
         <p>
