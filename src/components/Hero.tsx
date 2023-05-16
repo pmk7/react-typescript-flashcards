@@ -1,10 +1,6 @@
-import React, { useContext } from "react";
+import React from "react";
 import styled from "styled-components";
-import hero from "../assets/hero.jpg";
 import mountain from "../assets/mountain.svg";
-import Button from "./Button";
-import { useAuth0 } from "@auth0/auth0-react";
-import App from "../App";
 import { useAppContext } from "../context/AppContext";
 
 const Hero = () => {

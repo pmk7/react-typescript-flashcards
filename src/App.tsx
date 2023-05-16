@@ -1,10 +1,9 @@
-import React, { useContext } from "react";
+import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Testimonial from "./components/Testimonial";
+
 import Footer from "./components/Footer";
-import MySets from "./components/MySets";
+
 import Home from "./pages/HomePage";
 import Profile from "./pages/ProfilePage";
 import About from "./components/About";

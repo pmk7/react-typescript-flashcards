@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { steps } from "../utils/constants";
 
-interface Step {
+interface StepType {
   id: number;
   title: string;
   text: string;
@@ -14,7 +14,7 @@ const Concept = () => {
     <Wrapper>
       <h2>How It Works</h2>
       <Steps>
-        {steps.map((step) => {
+        {steps.map((step: StepType) => {
           const { id, title, text, image } = step;
           return (
             <Step key={id}>
