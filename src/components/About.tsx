@@ -19,7 +19,7 @@ const About = () => {
           This application emphasizes user experience by ensuring intuitive
           functionality and seamless performance. It's built using React,
           TypeScript, and styled-components on the frontend for wide-ranging
-          compatibility, speed and responsive design
+          compatibility, speed and responsive design.
         </p>
       </div>
     </Wrapper>
@@ -41,6 +41,7 @@ const Wrapper = styled.div`
   align-items: center;
   color: white;
   margin: 1rem 2rem;
+  height: 90vh;
 
   .about-container {
     max-width: 800px;

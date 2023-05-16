@@ -43,7 +43,8 @@ const Wrapper = styled.footer`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
+
+  background-color: var(--main-white);
   padding: 0 1rem;
 
   ul {
