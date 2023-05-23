@@ -1,5 +1,5 @@
 import React from "react";
-import { MySets, Profile } from "../components";
+import { MySets} from "../components";
 
 const ProfilePage: React.FC = () => {
   return (
