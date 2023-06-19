@@ -1,4 +1,3 @@
-// Flashcard.tsx
 import React, { useState } from "react";
 import styled from "styled-components";
 
@@ -10,67 +9,53 @@ interface FlashcardProps {
 const Flashcard: React.FC<FlashcardProps> = ({ front, back }) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
-  const flipCard = () => {
+  const handleClick = () => {
     setIsFlipped(!isFlipped);
   };
 
   return (
-    <Card onClick={flipCard} className={isFlipped ? "flipped" : ""}>
-      <CardContent className="front">{front}</CardContent>
-      <CardContent className="back">{back}</CardContent>
+    <Card onClick={handleClick} isFlipped={isFlipped}>
+      <Front>{front}</Front>
+      <Back>{back}</Back>
     </Card>
   );
 };
 
-const Card = styled.div`
-  width: 340px;
-  height: 380px;
+const Card = styled.div<{ isFlipped: boolean }>`
+  width: 400px;
+  height: 300px;
   perspective: 1000px;
-  cursor: pointer;
-
-  &:hover {
-    .front,
-    .back {
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-  }
-
-  &.flipped .front {
-    transform: rotateY(180deg);
-  }
-
-  &.flipped .back {
-    transform: rotateY(0);
-  }
-
-  @media screen and (min-width: 1200px) {
-    width: 800px;
-    height: 450px;
-  }
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  transform: ${(props) => (props.isFlipped ? "rotateY(180deg)" : "none")};
+  font-size: 2rem;
 `;
 
-const CardContent = styled.div`
+const Front = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  transition: transform 0.2s linear;
-  border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
-  background-color: #f6f7fb;
-  padding: 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+`;
 
-  &.front {
-    transform: rotateY(0);
-  }
-
-  &.back {
-    transform: rotateY(180deg);
-  }
+const Back = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transform: rotateY(180deg);
 `;
 
 export default Flashcard;
