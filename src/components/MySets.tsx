@@ -1,10 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import Flashcard from "./Flashcard";
 
 const MySets: React.FC = () => {
-  const [isFlipped, setIsFlipped] = useState(false);
-
   return (
     <Wrapper>
       <main className="my-sets">
