@@ -9,6 +9,8 @@ import LinkButton from "./LinkButton";
 import Profile from "./Profile";
 import LoginButton from "./Login";
 import LoginRedirect from "./LoginRedirect";
+import Word from './Word'
+import MyWords from './MyWords'
 
 export {
   About,
@@ -22,4 +24,6 @@ export {
   Profile,
   LoginButton,
   LoginRedirect,
+  Word, 
+  MyWords
 };

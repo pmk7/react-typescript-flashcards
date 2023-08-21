@@ -1,10 +1,10 @@
 import React from "react";
-import { MySets} from "../components";
+import { Word, MySets} from "../components";
 
 const ProfilePage: React.FC = () => {
   return (
     <>
-      <MySets />
+      <MySets/>
     </>
   );
 };
