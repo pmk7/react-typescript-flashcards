@@ -1,9 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
-
 import Footer from "./components/Footer";
-
 import Home from "./pages/HomePage";
 import Profile from "./pages/ProfilePage";
 import About from "./components/About";
@@ -11,6 +9,7 @@ import Sidebar from "./components/Sidebar";
 import { AppProvider } from "./context/AppContext";
 
 function App() {
+
   return (
     <Router>
       <AppProvider>
