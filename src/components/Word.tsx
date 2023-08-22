@@ -1,8 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
-import '../data/my_words.json'
 
-interface WordProps {
+export interface WordProps {
     id: number;
     german: string;
     english: string;
@@ -12,12 +11,12 @@ interface WordProps {
 const Word: React.FC<WordProps> = ({id, german, english, sentence}: WordProps) => {
 
 
-    return <Wrapper>
-        <div key={id}>
-            <p>{german}</p>
-            <p>{english}</p>
-        </div>
+    return (
+    <Wrapper>
+        <p>German: {german}</p><span> English: {english}</span>
+    
     </Wrapper>
+ )
 }
 
 const Wrapper = styled.div`

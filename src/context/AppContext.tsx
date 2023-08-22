@@ -11,6 +11,8 @@ interface AppContextValue {
   isLoading: boolean;
   isAuthenticated: boolean;
   user: any;
+  userWordData: any;
+  setUserWordData: React.Dispatch<React.SetStateAction<any>>;
 }
 
 const AppContext = createContext<AppContextValue>({
@@ -23,6 +25,8 @@ const AppContext = createContext<AppContextValue>({
   isLoading: false,
   isAuthenticated: false,
   user: null,
+  userWordData: [],
+  setUserWordData: () => {},
 });
 
 export const useAppContext = () => useContext(AppContext);
@@ -36,6 +40,18 @@ export const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
   const { loginWithRedirect, logout, user, isAuthenticated, isLoading } =
     useAuth0();
   const [myUser, setMyUser] = useState<any>(null);
+  // Word Data
+  const [userWordData, setUserWordData] = useState<any>([])
+
+  // Loading data from json server
+  useEffect(()=> {
+    fetch('http://localhost:8000/words')
+    .then((res)=> res.json())
+    .then((data)=> setUserWordData(data))
+    .catch((err)=> console.log(err))
+  },[])
+
+
 
   useEffect(() => {
     setMyUser(user);
@@ -61,6 +77,8 @@ export const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
         logout,
         isAuthenticated,
         myUser,
+        userWordData,
+        setUserWordData
       }}
     >
       {children}
