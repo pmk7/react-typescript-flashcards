@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -9,7 +9,6 @@ import Sidebar from "./components/Sidebar";
 import { AppProvider } from "./context/AppContext";
 
 function App() {
-
   return (
     <Router>
       <AppProvider>
